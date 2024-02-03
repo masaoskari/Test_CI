@@ -51,7 +51,7 @@ module.exports = (env, argv) => {
       ...config,
       devServer: {
         historyApiFallback: true,
-        port: 80,
+        port: 3000,
       },
       devtool: "inline-source-map",
     };
