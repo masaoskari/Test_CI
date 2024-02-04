@@ -26,4 +26,4 @@ jobs:
         run: npm install
 
       - name: Run Eslint
-        run: DEBUG=eslint:* npm run lint
+        run: npm run lint

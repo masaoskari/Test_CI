@@ -6,6 +6,8 @@ const App = () => {
   return (
     <React.StrictMode>
       <Example />
+
+      
       <PartFormEditor partId={"modern-door123"} />
     </React.StrictMode>
   );
