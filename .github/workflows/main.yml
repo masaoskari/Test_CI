@@ -10,7 +10,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-            component: true
+          component: true
   lint:
     runs-on: ubuntu-22.04
     steps:
@@ -25,8 +25,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run lint
-        run: npm run lint
-
-
-
+      - name: Run Eslint
+        run: eslint . --ext .js,.jsx,.ts,.tsx
