@@ -26,4 +26,4 @@ jobs:
         run: npm install
 
       - name: Run Eslint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+        run: DEBUG=eslint:* npm run lint
