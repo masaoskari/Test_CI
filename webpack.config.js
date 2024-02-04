@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env, argv) => {
-  const isDev = argv.mode === "development";
+  const isDev = argv?.mode === "development";
 
   const rules = [
     {
@@ -12,11 +12,7 @@ module.exports = (env, argv) => {
     },
     {
       test: /\.(c|s[ac])ss$/i,
-      use: [
-        MiniCssExtractPlugin.loader,
-        "css-loader",
-        "sass-loader",
-      ],
+      use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
     },
   ];
 
@@ -55,8 +51,7 @@ module.exports = (env, argv) => {
       },
       devtool: "inline-source-map",
     };
-  }
-  else {
+  } else {
     console.log("Building for production");
   }
 

@@ -1,5 +1,10 @@
 {
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "root": true,
@@ -17,46 +22,18 @@
     }
   ],
   "rules": {
-    "indent": [
-      "warn",
-      2
-    ],
-    "quotes": [
-      "error",
-      "double"
-    ],
-    "semi": [
-      "error",
-      "always"
-    ],
+    "indent": ["warn", 2],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
     "no-trailing-spaces": "warn",
     "@typescript-eslint/no-unused-vars": "warn",
-    "comma-dangle": [
-      "warn",
-      "always-multiline"
-    ],
-    "array-bracket-spacing": [
-      "warn",
-      "never"
-    ],
-    "array-bracket-newline": [
-      "warn",
-      "consistent"
-    ],
-    "array-element-newline": [
-      "warn",
-      "consistent"
-    ],
-    "object-curly-spacing": [
-      "warn",
-      "always"
-    ],
-    "object-curly-newline": [
-      "warn"
-    ],
-    "prefer-const": [
-      "warn"
-    ],
+    "comma-dangle": ["warn", "always-multiline"],
+    "array-bracket-spacing": ["warn", "never"],
+    "array-bracket-newline": ["warn", "consistent"],
+    "array-element-newline": ["warn", "consistent"],
+    "object-curly-spacing": ["warn", "always"],
+    "object-curly-newline": ["warn"],
+    "prefer-const": ["warn"],
     "comma-spacing": "warn",
     "no-multi-spaces": "warn"
   }
