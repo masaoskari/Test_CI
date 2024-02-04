@@ -14,4 +14,22 @@ jobs:
         with:
           build: npm run build
           start: npm start
+  eslint:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: ESLint
+        run: npx eslint .
+
+
 
